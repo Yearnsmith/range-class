@@ -2,11 +2,11 @@
 
 This is a simple, no frills class that inherits from `Set()`.
 
-In languages like ruby, Range is an in-built class that can be created on the fly.
+In some languages, Range is a built-in class, that can easily be instantiated.
 
 This adds a very simple implementation of making a Range.
 
-***❕Note: For the moment, this is not a port of any other languages implementation, but a very basic child class of `Set()`***
+***❕Note: this is not a port of any other languages implementation, but a very basic child class of `Set()`***
 
 ## Syntax
 
@@ -19,7 +19,7 @@ new Range(start, end, options)
 
 #### `start`
 
-First item of the `Range`
+First item of the `Range`.
 
 #### `end`
 
@@ -29,7 +29,7 @@ example: &ensp;`new Range(1, 5) // { 1, 2, 3, 4}`
 
 #### `options` (optional)
 
-  An object adjusting the output.
+  An object whose properties adjust the output.
 
 #### options:
 
@@ -60,11 +60,11 @@ new Range('a', 'e', { inclusive: true }); // { 'a', 'b', 'c', 'd', 'e' }
 
 - Error handling
 - support for reverse ranges
-  - `new Range(5, 1); // {5, 4, 3, 2 }
+  - `new Range(5, 1); // {5, 4, 3, 2 }`
 - support for multi-character strings
 
   - `new Range('AA', 'AE'); // { 'AA', 'AB', 'AC', 'AD' }`
-  - `new Range('AA', 'BZ'); // { 'AA', 'AB', 'AC' ... 'BX', 'BY', 'BZ' }`
+  - `new Range('AA', 'CA'); // { 'AA', 'AB', 'AC' ... 'BX', 'BY', 'BZ' }`
 - alternate ruby-style syntax
   - `new Range(1...5); // { 1, 2, 3, 4 }`
   - `new Range(1..5);  // { 1, 2, 3, 4, 5 }`
