@@ -59,10 +59,8 @@ new Range('a', 'e', { inclusive: true }); // { 'a', 'b', 'c', 'd', 'e' }
 ## To Do
 
 - Error handling
-- support for reverse ranges
-  ```js
-  new Range(5, 1); // {5, 4, 3, 2 }
-  ```
+- ~~support for reverse ranges~~
+  added by [@smith-sj](https://github.com/smith-sj)
 
 - support for multi-character strings
   ```js
