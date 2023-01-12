@@ -60,12 +60,20 @@ new Range('a', 'e', { inclusive: true }); // { 'a', 'b', 'c', 'd', 'e' }
 
 - Error handling
 - support for reverse ranges
-  - `new Range(5, 1); // {5, 4, 3, 2 }`
-- support for multi-character strings
+  ```js
+  new Range(5, 1); // {5, 4, 3, 2 }
+  ```
 
-  - `new Range('AA', 'AE'); // { 'AA', 'AB', 'AC', 'AD' }`
-  - `new Range('AA', 'CA'); // { 'AA', 'AB', 'AC' ... 'BX', 'BY', 'BZ' }`
-- alternate ruby-style syntax
-  - `new Range(1...5); // { 1, 2, 3, 4 }`
-  - `new Range(1..5);  // { 1, 2, 3, 4, 5 }`
+- support for multi-character strings
+  ```js
+  new Range('AA', 'AE'); // { 'AA', 'AB', 'AC', 'AD' }
+  new Range('AA', 'CA'); // { 'AA', 'AB', 'AC' ... 'BX', 'BY', 'BZ' }
+  ```
+
+- support for step parameter
+  ```js
+  new Range(2, 10, { step: 2 }); // { 2, 4, 6, 8 }
+  new Range(2, 10, { inclusive: true, step: 2 }); // { 2, 4, 6, 8, 10 }
+  ```
+
 - support for other types?
