@@ -1,7 +1,9 @@
 const mkArr = (start, end, options = {inclusive: false}) => {
 
   const mkr = (_s = start, _e = end, _o = options) => (
-    [...new Array((_o.inclusive ? _e + 1 : _e) - _s).keys()].map(num => num + _s)
+    _e < _s
+      ? [...new Array((_o.inclusive ? _s + 1 : _s) - _e).keys()].map(num => _s - num)
+      : [...new Array((_o.inclusive ? _e + 1 : _e) - _s).keys()].map(num => num + _s)
   );
 
   if (typeof start === 'string') {
